@@ -13,27 +13,158 @@ img{
 body {
     font-family: 'Helvetiva Neue', sans-serif;
 }
+/* COMMON */
 
-/* LAYOUT */
+/* HEADER */
+header{
+  width: 100%;
+  height: 20vh;
+  background-color: rgb(0, 150, 136);
+}
+/* HEADER */
+
+/*  START CHAT CONTAINER*/
 .container{
     width: 100%;
     height: 100vh;
     position: relative;
-    background-color: lightcoral;
+    /* background-image: linear-gradient(#63a78d,#94b89b,#bcc8b3,#dadbd3); */
+    background-image: linear-gradient(#c0c0bd,#d1ddc8,#b7bfb9,#b5bbb9);
 }
 .chat-container{
-    position:absolute;
-    top: 50%;
-    bottom: 50%;
-    transform: translate (-50%, -50%);
-    width:80%;
+    position: absolute;
+    bottom: 31%;
+    left: 11%;
+    width: 60%;
     height: 600px;
     display: flex;
 
 }
 .chat-list{
-    width: 35%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
+/* LIST HEADER */
+.list-header{
+    display: flex;
+    background-color: rgb(234,234,234);
+}
+.user-icon{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.user-icon img{
+    border-radius: 50%;
+    width: 60px;
+    height: 100%;
+}
+.username{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.user-functions{
+  display: flex;
+  justify-content: flex-end;
+  width: 20%;
+  height: 100%;
+  align-items: center;
+  gap: 15px;
+  color: rgb(68, 68, 67);
+  margin-left: 300px;
+
+}
+/* LIST HEADER */
+
+/*NOTIFY  */
+.notify{
+    display: flex;
+    background-color:#8edafc;
+    height: 69px;
+}
+.banner-text{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.banner{
+    margin-left: 10px;
+}
+/*NOTIFY  */
+
+/* SEARCH CHAT */
+.search-input{
+    background-color: white;
+    border-radius: 3px;
+    
+}
+.fa-bell-slash{
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 12px;
+}
+#user-search{
+  width: 94%;
+  padding: 10px;
+  height: 39px;
+}
+.pointer{
+    cursor: pointer;
+}
+.fa-magnifying-glass{
+    color: gray;
+    background-color: white;
+    width: 31px;
+    margin-right: -4px;
+    height: 18px;
+}
+/* SEARCH CHAT */
+
+/* LIST USER  */
+.list-users{
+    width: 100%;
+    flex-grow: 1;
+    height: 100px;
+    overflow-y: scroll;
+    background-color: white
+}
+
+/* CARD USER  */
+.card-user {
+  width: 100%;
+  background-color: white;
+  border-bottom: 1px solid gray;
+  padding: 5px;
+  display: flex;
+  gap: 10px;
+  cursor: pointer;
+}
+.card-user img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+.date{
+  color: gray;
+  display: flex;
+  justify-content: flex-end;
+  width: 260px;
+  font-size: 13px;
+}
+/* CARD USER  */
+/*  FINISH CHAT CONTAINER*/ 
+
+/* START CHAT-MAIN */
+.chat-main{
+    width: calc(100% - 35%);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+/* FRIEND HEADER */
+/* FINISH CHAT-MAIN */

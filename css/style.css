@@ -109,19 +109,18 @@ header{
   padding: 12px;
 }
 #user-search{
-  width: 94%;
+  width: 92%;
   padding: 10px;
   height: 39px;
 }
 .pointer{
     cursor: pointer;
 }
-.fa-magnifying-glass{
-    color: gray;
-    background-color: white;
-    width: 31px;
-    margin-right: -4px;
-    height: 18px;
+.search-icon{
+  color: gray;
+  font-size: 15px;
+  padding: 11px;
+  border: 1px solid gray;
 }
 /* SEARCH CHAT */
 
@@ -149,11 +148,14 @@ header{
     width: 50px;
     height: 50px;
 }
+.card-info p{
+    margin-top: 5px;
+}
 .date{
   color: gray;
   display: flex;
   justify-content: flex-end;
-  width: 260px;
+  width: 325px;
   font-size: 13px;
 }
 /* CARD USER  */
@@ -167,4 +169,37 @@ header{
     height: 100%;
 }
 /* FRIEND HEADER */
+.friend-header{
+  background-color: #eaeaea;
+  display: flex;
+  height: 60px;
+}
+.friend-icon img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.friend-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.last-access{
+  display: flex;
+  align-content: last baseline;
+  align-self: end;
+  margin-left: -55px;
+}
+.friend-functions{
+  display: flex;
+  justify-content: flex-end;
+  width: 490px;
+  color: gray;
+  font-size: 20px;
+}
+#friend-function{
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
 /* FINISH CHAT-MAIN */

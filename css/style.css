@@ -203,3 +203,34 @@ header{
   align-items: center;
 }
 /* FINISH CHAT-MAIN */
+
+/* START CHAT-BOX */
+.chat-box{
+  background-image: url("/img\ 2/mine.jpg");
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+.message-sended{
+  background-color: #d5f9ba;
+  height: 50px;
+  border-radius: 10px;
+  margin-left: 400px;
+}
+#first-msended{
+  margin-top: 60px;
+}
+.message-sended,
+.message-received{
+  border-radius: 10px;
+  display: flex;
+  width: 40%;
+  height: 50px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+.message-received{
+  background-color:white;
+  margin-left: 40px;
+}
+/* FINISH CHAT-BOX */

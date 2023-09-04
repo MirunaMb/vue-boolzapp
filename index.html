@@ -22,97 +22,125 @@
 </head>
 
 <body>
-    <header></header>
-    <div class="container" id="app">
-        <div class="chat-container">
-            <div class="chat-list">
-                <div class="list-header">
-                    <div class="user-icon">
-                        <img src="./img 2/avatar_io.jpg" alt="">
+    <div class="wrapper" id="app">
+        <!-- COL CONTACTS -->
+        <div class="col-contacts">
+            <!-- COL CONTACTS HEADER -->
+            <header class="col-header">
+                <div class="user">
+                    <div class="user-pic">
+                        <img src="./img 2/avatar_io.jpg" alt="" />
                     </div>
-                    <div class="username">
-                        Sofia
-                    </div>
-                    <div class="user-functions">
-                        <i class="fa-solid fa-circle-notch cu-clickable"></i>
-                        <i class="fa-solid fa-message cu-clickable"></i>
-                        <i class="fa-solid fa-ellipsis-vertical cu-clickable"></i>
+
+                    <div class="main-text">
+                        <h3 class="main-text-upper">Sofia</h3>
                     </div>
                 </div>
-                <div class="list-jumbotron">
-                    <div class="notify">
-                        <div class="bell-icon">
-                            <i class="fa-solid fa-bell-slash"></i>
-                        </div>
-                        <div class="banner">
-                            <h4 class="banner-text">Ricevi le notifiche di nuovi messaggi</h4>
-                            <a href="#">
-                                Attiva le notifiche desktop
-                            </a>
-                        </div>
-                    </div>
-                    <div class="search-chat">
-                        <div class="search-input">
-                            <label for="user-search"></label>
-                            <i class="fa-solid fa-magnifying-glass search-icon pointer "></i>
-                            <input type="text" id="user-search" placeholder="Cerca o crea una nuova chat"></input>
-                        </div>
-                    </div>
+                <div class="icons-container">
+                    <i class="fa-solid fa-circle-notch"></i>
+                    <i class="fa-solid fa-message"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
                 </div>
-                <div class="list-user">
-                    <div class="card-user">
-                        <div class="">
-                            <img src="./img 2/avatar_1.jpg" alt=""></img>
-                        </div>
-                        <div class="card-info">
-                            <div>
-                                <h3>Michele</h3>
-                                <p>Ultimo messaggio inviato</p>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="date">12:00</p>
-                        </div>
-                    </div>
+            </header>
+
+            <!-- COL CONTACTS DISCLAIMER -->
+            <div class="disclaimer">
+                <div class="icon-container">
+                    <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div class="main-text">
+                    <h3 class="main-text-upper">Ricevi notifiche di nuovi messaggi</h3>
+                    <a class="main-text-lower" href="#">Attiva notifiche desktop</a>
                 </div>
             </div>
-            <div class="chat-main">
-                <div class="friend-header">
-                    <div class="friend-icon">
-                        <img src="./img 2/avatar_1.jpg" alt="">
+
+            <!-- CONTACTS SEARCH -->
+            <div class="contact-search">
+                <div class="search-container">
+                    <div class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <div class="friend-name">
-                        Michele
-                    </div>
-                    <div class="last-access">
-                        <p>Ultimo accesso oggi alle 12:00</p>
-                    </div>
-                    <div class="friend-functions">
-                        <i id="friend-function" class="fa-solid fa-magnifying-glass cu-clickable"></i>
-                        <i id="friend-function" class="fa-solid fa-paperclip cu-clickable"></i>
-                        <i id="friend-function" class="fa-solid fa-ellipsis-vertical cu-clickable"></i>
-                    </div>
+                    <input class="search-input" type="text" />
                 </div>
-                <!-- START CHAT-BOX  -->
-                <div class="chat-box">
-                    <div id="first-msended" class="message-sended">
-                        <p>Hai portato il cane a spasso</p>
-                        <p>15:30</p>
-                    </div>
-                    <div class="message-sended">
-                        <p>Ricordati di mettere i panni</p>
-                        <p>15:30</p>
-                    </div>
-                    <div class="message-received">
-                        <p>Tutto fatto</p>
-                        <p>16:15</p>
-                    </div>
-                </div>
-                <!-- FINISH CHAT-BOX -->
             </div>
+
+            <!-- CONTACTS LIST -->
+            <ul class="contacts-list">
+                <li v-for="(contact,index) in contacts " class="contact">
+                    <div class="contact-pic">
+                        <img :src="contact.avatar" alt="" />
+                    </div>
+
+                    <div class="main-text">
+                        <h3 class="main-text-upper">{{ contact.name }}</h3>
+                        <!-- <h4 class="main-text-lower">{{ contact.lastMsg}}</h4> -->
+                    </div>
+
+                    <div class="time">12:00</div>
+                </li>
+            </ul>
         </div>
+
+        <!-- COL CHAT -->
+        <main class="col-chat">
+            <!-- COL CHAT HEADER -->
+            <header class="col-header">
+                <div class="user">
+                    <div class="user-pic">
+                        <img src="./img 2/avatar_1.jpg" alt="" />
+                    </div>
+
+                    <div class="main-text">
+                        <h3 class="main-text-upper">Michele</h3>
+                        <h4 class="main-text-lower">Ultimo accesso oggi alle 12:00</h4>
+                    </div>
+                </div>
+                <div class="icons-container">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-paperclip"></i>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+            </header>
+
+            <section class="messages">
+                <div class="message sent">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+                    magnam nihil cupiditate. Corrupti modi ex recusandae exercitationem
+                    accusamus, quo odit est adipisci dignissimos quibusdam eaque beatae
+                    quasi harum, ab accusantium.
+                </div>
+                <div class="message sent">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+                    magnam nihil cupiditate. Corrupti modi ex recusandae exercitationem
+                    accusamus, quo odit est adipisci dignissimos quibusdam eaque beatae
+                    quasi harum, ab accusantium.
+                </div>
+                <div class="message received">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Mollitia
+                    magnam nihil cupiditate. Corrupti modi ex recusandae exercitationem
+                    accusamus, quo odit est adipisci dignissimos quibusdam eaque beatae
+                    quasi harum, ab accusantium.
+                </div>
+            </section>
+
+            <footer class="user-actions">
+                <div class="icons-container">
+                    <i class="fa-solid fa-face-smile"></i>
+                </div>
+
+                <div class="message-bar">
+                    <input class="message-input" type="text" name="" id="" />
+                </div>
+
+                <div class="icons-container">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+            </footer>
+        </main>
     </div>
     <script src="./main.js"></script>
 </body>
+
+</html>
 
 </html>

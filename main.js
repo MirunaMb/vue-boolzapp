@@ -3,6 +3,12 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            activeContactIndex: 0,
+            newMessage: {
+                date: '...',
+                message: '',
+                status: 'sent',
+            },
             contacts: [
                 {
                     name: 'Michele',
@@ -181,6 +187,31 @@ createApp({
                     ],
                 }
             ],
+        }
+    },
+
+    methods: {
+        // SETTO L'INDICE DELL' CONTATTO ATTIVO
+        setActiveIndex(index) {
+            this.activeContactIndex = index;
+        },
+        // INVIO UN NUOVO MESSAGGIO
+        sendNewMessage() {
+            if (this.newMessage.message == '') return;
+            const newMessageStatic = { ...this.newMessage }
+            this.contacts[this.activeContactIndex].messages.push(newMessageStatic);
+            this.newMessage.message = '';
+            // INVIO LA RISPOSTA AUTOMATICA
+            setTimeout(() => {
+                const newAnswer = {
+                    date: '...',
+                    message: 'ok',
+                    status: 'received',
+
+                };
+
+                this.contacts[this.activeContactIndex].messages.push(newAnswer);
+            }, 1000)
         }
     }
 }).mount('#app');

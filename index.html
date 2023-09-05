@@ -60,7 +60,7 @@
                     <div class="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <input class="search-input" type="text" />
+                    <input class="search-input" type="text" v-model="mySearch" @keyUp.enter="searchingContacts" />
                 </div>
             </div>
 

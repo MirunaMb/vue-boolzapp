@@ -60,14 +60,15 @@
                     <div class="search-icon">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    <input class="search-input" type="text" v-model="mySearch" @keyUp.enter="searchingContacts" />
+                    <input class="search-input" type="text" @keyup="searchingContacts" v-model="mySearch" />
                 </div>
             </div>
 
             <!-- CONTACTS LIST -->
             <ul class="contacts-list">
                 <!-- CONTACTS V-FOR -->
-                <li v-for="(contact,index) in contacts " class="contact" @click="setActiveIndex(index)">
+                <li v-for="(contact,index) in contacts " v-show="contact.visible" class="contact"
+                    @click="setActiveIndex(index)">
                     <div class="contact-pic">
                         <img :src="contact.avatar" alt="" />
                     </div>

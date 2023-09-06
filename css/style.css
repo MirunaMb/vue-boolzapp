@@ -9,7 +9,7 @@
   /* ## APP */
   --low-contrast-bg: #eaeaea; /*            ? HEADER, FOOTER AND ACTIVE CONTACT   */
   --lower-contrast-bg: #ffffff; /*          ? ALL CONTACTS                        */
-  --chat-bg: url('./img/mine.jpg'); /*       ? CHAT                                */
+  --chat-bg: url ("./img/mine.jpg"); /*       ? CHAT                                */
  
   /* ## MESSAGES */
   --received-message-bg: #ffffff; /*        ? RECEIVED MESSAGES                   */
